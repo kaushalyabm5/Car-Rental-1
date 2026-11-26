@@ -1,26 +1,35 @@
+import heroBg from "@/assets/home/home-hero-3.png";
+
 export default function HeroSection() {
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-[#050505] text-white overflow-hidden">
+    <section
+      className="min-h-screen relative py-24 md:py-32 px-6 bg-[#050505] bg-cover bg-center bg-no-repeat text-white border-b border-neutral-200 overflow-hidden flex items-center"
+      style={{ backgroundImage: `url(${heroBg.src})` }}
+    >
+      {/* Dark atmospheric overlay to let the image shine while keeping white text crisp */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80 pointer-events-none" />
+
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        <p className="text-amber-400 text-xs uppercase tracking-[0.25em] mb-4">
-          Master Car Rental • Sri Lanka
-        </p>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-          Arrive on Your Big Day in <span className="text-amber-400">Timeless Luxury</span>
+        <h1 className="text-[5rem] font-normal tracking-tight leading-[1.15] text-white">
+          Arrive in Timeless Luxury
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto mt-5 text-base md:text-lg">
-          Chauffeur-driven Mercedes-Benz, BMW, and Audi wedding cars tailored for unforgettable entrances.
+
+        <p className="text-neutral-200 max-w-2xl mx-auto mt-5 text-base md:text-lg leading-relaxed">
+          Chauffeur-driven Mercedes-Benz, BMW, and Audi wedding cars tailored for
+          unforgettable entrances.
         </p>
+
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="#concierge"
-            className="bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-lg transition"
+            className="bg-transparent border border-white/40 hover:border-white hover:bg-white/10 text-white text-xs tracking-wide font-normal px-6 py-3 rounded-lg transition"
           >
             Try AI Ride Concierge
           </a>
+
           <a
             href="#fleet"
-            className="border border-white/20 hover:border-amber-400/60 text-white font-medium px-6 py-3 rounded-lg transition"
+            className="bg-[white] border border-white hover:bg-white text-black text-xs tracking-wide font-medium px-6 py-3 rounded-lg transition"
           >
             View Luxury Fleet
           </a>

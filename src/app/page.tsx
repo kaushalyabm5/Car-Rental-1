@@ -1,8 +1,13 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FleetSection from "@/components/FleetSection";
-import PackagesSection from "@/components/PackagesSection";
-import ConciergeSection from "@/components/ConciergeSection";
+import AboutSection from "@/components/AboutSection";
+import ReviewsSection from "@/components/ReviewsSection";
+import HowToRentSection from "@/components/HowToRentSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import CarBrandsSection from "@/components/CarBrandsSection";
+import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -10,8 +15,13 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FleetSection />
-      <PackagesSection />
-      <ConciergeSection />
+      <AboutSection />
+        <WhyChooseUsSection />
+      <ReviewsSection />
+      <HowToRentSection />
+      <CarBrandsSection />
+      <Footer />
+    
     </main>
   );
 }
