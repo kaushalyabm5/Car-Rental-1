@@ -9,7 +9,7 @@ export interface CarItem {
     | "Convertible / Grand Tourer";
   subCategory: string;
   color: string;
-  trimType: "Stock Factory Spec" | "M-Sport / AMG / S-Line Trim" | "Subtle Custom / Modified Look";
+  trimType: VehicleSpec;
   styleTag: string;
   rearComfortNote: string;
   priceLabel: string;
@@ -91,6 +91,8 @@ export const VEHICLE_SPEC_OPTIONS = [
   "Subtle Custom / Modified Styling",
 ] as const;
 
+export type VehicleSpec = (typeof VEHICLE_SPEC_OPTIONS)[number];
+
 export const DURATION_OPTIONS = [
   "Up to 4 Hours",
   "6 Hours",
@@ -163,7 +165,7 @@ export const FLEET_CARS: CarItem[] = [
     vehicleType: "Luxury SUV",
     subCategory: "VIP Command SUV (e.g. Toyota Land Cruiser Prado)",
     color: "Pearl White",
-    trimType: "Subtle Custom / Modified Look",
+    trimType: "Subtle Custom / Modified Styling",
     styleTag: "Commanding VIP SUV",
     rearComfortNote:
       "Tall upright cabin and plush ride comfort—ideal for uneven roads, estate venues, and grand presence.",

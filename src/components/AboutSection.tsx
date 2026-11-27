@@ -45,7 +45,7 @@ function AnimatedNumber({
     };
 
     animationFrameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
   }, [start, target]);
 
   return (
@@ -104,7 +104,7 @@ export default function AboutSection() {
               About Master Car Rental
             </p>
 
-            <h2 className="text-3xl md:text-5xl font-normal  tracking-tight leading-[1.1] text-white">
+            <h2 className="text-3xl md:text-5xl font-normal tracking-tight leading-[1.1] text-white">
               Crafted for Unforgettable Arrivals
             </h2>
 
@@ -124,7 +124,7 @@ export default function AboutSection() {
         >
           {STATS.map((stat) => (
             <div key={stat.label} className="py-5 sm:py-2 px-6">
-              <p className="text-4xl md:text-6xl font-medium tracking-tight text-white tabular-nums">
+              <p className="text-4xl md:text-6xl font-normal tracking-tight text-white tabular-nums">
                 <AnimatedNumber
                   target={stat.target}
                   suffix={stat.suffix}
