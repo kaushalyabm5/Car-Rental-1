@@ -7,6 +7,9 @@ import HowToRentSection from "@/components/HowToRentSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import CarBrandsSection from "@/components/CarBrandsSection";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
+import CtaSection from "@/components/CtaSection";
+
 
 
 export default function Home() {
@@ -16,10 +19,13 @@ export default function Home() {
       <HeroSection />
       <FleetSection />
       <AboutSection />
+      <CarBrandsSection />
+      <Gallery />
         <WhyChooseUsSection />
       <ReviewsSection />
       <HowToRentSection />
-      <CarBrandsSection />
+      
+      <CtaSection />
       <Footer />
     
     </main>

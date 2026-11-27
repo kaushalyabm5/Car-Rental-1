@@ -50,7 +50,7 @@ export default function FleetSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.1] text-[#0A0A0A]">
+          <h2 className="text-3xl md:text-5xl font-normal tracking-tight leading-[1.1] text-[#0A0A0A]">
             Signature Wedding Fleet
           </h2>
           <p className="text-neutral-600 mt-4 text-sm md:text-base leading-relaxed">
