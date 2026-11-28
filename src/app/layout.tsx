@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.className} font-sans bg-white text-[#0A0A0A] antialiased`}>
+      <body
+        className={`${poppins.className} font-sans bg-white text-[#0A0A0A] antialiased`}
+      >
         <LoadingScreen />
         {children}
       </body>

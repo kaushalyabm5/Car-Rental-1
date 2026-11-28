@@ -22,7 +22,7 @@ function SocialIcons({
 }) {
   const buttonStyles =
     variant === "overlay"
-      ? "w-11 h-11 rounded-full bg-white border border-neutral-300 hover:border-[#0A0A0A] hover:bg-neutral-100 text-[#0A0A0A] flex items-center justify-center transition-colors duration-200"
+      ? "w-12 h-12 rounded-full bg-white border border-neutral-300 hover:border-[#0A0A0A] hover:bg-neutral-100 text-[#0A0A0A] flex items-center justify-center transition-colors duration-200"
       : `w-9 h-9 rounded-full bg-transparent border flex items-center justify-center transition-colors duration-200 ${
           isScrolled
             ? "border-neutral-300 hover:border-[#0A0A0A] text-[#0A0A0A]"
@@ -158,13 +158,13 @@ export default function Navbar() {
               : "bg-transparent border-b border-white/15 shadow-none text-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between lg:grid lg:grid-cols-3">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between xl:grid xl:grid-cols-3">
           {/* Left: Logo */}
           <div className="flex items-center justify-start min-w-0">
             <Link
               href="/"
               onClick={closeMenu}
-              className={`text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] whitespace-nowrap transition-colors duration-300 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold uppercase tracking-[0.16em] sm:tracking-[0.2em] whitespace-nowrap transition-colors duration-300 ${
                 isMenuOpen || isScrolled ? "text-[#0A0A0A]" : "text-white"
               }`}
             >
@@ -181,10 +181,10 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Center: Navigation Links (Tablet & Desktop) */}
+          {/* Center: Navigation Links (Desktop >= 1280px) */}
           <nav
             aria-label="Primary Navigation"
-            className={`hidden md:flex items-center justify-center gap-5 lg:gap-8 text-xs lg:text-sm font-normal tracking-wide whitespace-nowrap transition-colors duration-300 ${
+            className={`hidden xl:flex items-center justify-center gap-8 text-sm font-normal tracking-wide whitespace-nowrap transition-colors duration-300 ${
               isScrolled ? "text-neutral-700" : "text-white/85"
             }`}
           >
@@ -201,9 +201,9 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right: Social Icons on Tablet/Desktop, Menu Toggle on Mobile */}
+          {/* Right: Social Icons on Desktop (>= 1280px), Menu Button on Mobile & Tablets/iPads */}
           <div className="flex items-center justify-end">
-            <div className="hidden md:flex">
+            <div className="hidden xl:flex">
               <SocialIcons variant="header" isScrolled={isScrolled} />
             </div>
 
@@ -211,9 +211,9 @@ export default function Navbar() {
               type="button"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
-              aria-controls="mobile-fullscreen-menu"
+              aria-controls="fullscreen-menu"
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className={`md:hidden w-10 h-10 rounded-full border flex items-center justify-center transition-colors duration-300 cursor-pointer ${
+              className={`xl:hidden w-11 h-11 rounded-full border flex items-center justify-center transition-colors duration-300 cursor-pointer ${
                 isMenuOpen || isScrolled
                   ? "border-neutral-300 text-[#0A0A0A] hover:border-[#0A0A0A]"
                   : "border-white/30 text-white hover:border-white"
@@ -241,10 +241,10 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Full-Screen Menu Overlay */}
+      {/* Mobile & Tablet/iPad Full-Screen Menu Overlay (< 1280px) */}
       <div
-        id="mobile-fullscreen-menu"
-        className={`md:hidden fixed inset-0 z-40 bg-white text-[#0A0A0A] flex flex-col justify-between pt-24 pb-10 px-6 transition-[opacity,transform,visibility] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        id="fullscreen-menu"
+        className={`xl:hidden fixed inset-0 z-40 bg-white text-[#0A0A0A] flex flex-col justify-between pt-24 pb-10 px-6 sm:px-10 transition-[opacity,transform,visibility] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isMenuOpen
             ? "opacity-100 translate-y-0 visible pointer-events-auto"
             : "opacity-0 -translate-y-4 invisible pointer-events-none"
@@ -252,8 +252,8 @@ export default function Navbar() {
       >
         <div className="flex-1 flex items-center justify-center">
           <nav
-            aria-label="Mobile Navigation"
-            className="flex flex-col items-center justify-center gap-6 text-center"
+            aria-label="Mobile and Tablet Navigation"
+            className="flex flex-col items-center justify-center gap-6 sm:gap-7 text-center"
           >
             {NAV_LINKS.map((item, index) => {
               const openDelayMs = 100 + index * 55;
@@ -267,7 +267,7 @@ export default function Navbar() {
                     style={{
                       transitionDelay: `${isMenuOpen ? openDelayMs : closeDelayMs}ms`,
                     }}
-                    className={`block text-3xl sm:text-4xl font-medium tracking-tight text-[#0A0A0A] hover:text-neutral-500 transition-[transform,opacity,color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    className={`block text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#0A0A0A] hover:text-neutral-500 transition-[transform,opacity,color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       isMenuOpen
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-7"
