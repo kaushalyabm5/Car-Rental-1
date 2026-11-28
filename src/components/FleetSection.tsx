@@ -1,5 +1,7 @@
-import car1 from "@/assets/cars/1.jpg";
-import car2 from "@/assets/cars/2.jpg";
+import car1 from "@/assets/cars/mercedes-s.jpg";
+import car2 from "@/assets/cars/bmw-5.jpg";
+import car3 from "@/assets/cars/audia6.jpg";
+import car4 from "@/assets/cars/mercedes-e.jpg";
 
 
 const FEATURED_CARS = [
@@ -28,7 +30,7 @@ const FEATURED_CARS = [
     price: "LKR 35,000",
     originalPrice: "LKR 39,000",
     unit: "/day",
-    image: car1,
+    image: car3,
   },
   {
     id: 4,
@@ -37,7 +39,7 @@ const FEATURED_CARS = [
     price: "LKR 40,000",
     originalPrice: "LKR 44,500",
     unit: "/day",
-    image: car2,
+    image: car4,
   },
 ];
 
