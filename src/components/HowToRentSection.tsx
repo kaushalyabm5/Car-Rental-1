@@ -1,4 +1,5 @@
-import processBg from "@/assets/home/home-hero-2.png";
+import processDesktopBg from "@/assets/home/home-hero-2.png";
+import processMobileBg from "@/assets/home/bg-img-mobile.png";
 
 const RENTAL_STEPS = [
   {
@@ -35,9 +36,22 @@ export default function HowToRentSection() {
   return (
     <section
       id="how-to-rent"
-      className="relative py-24 md:py-32 px-6 bg-[#050505] bg-cover bg-center bg-no-repeat text-white border-b border-white/10 overflow-hidden"
-      style={{ backgroundImage: `url(${processBg.src})` }}
+      className="relative py-24 md:py-32 px-6 bg-[#050505] text-white border-b border-white/10 overflow-hidden"
     >
+      {/* Mobile Background Image */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{ backgroundImage: `url(${processMobileBg.src})` }}
+      />
+
+      {/* Desktop / Tablet Background Image */}
+      <div
+        aria-hidden="true"
+        className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${processDesktopBg.src})` }}
+      />
+
       {/* Clean dark gradient overlay so the car photo reads clearly behind crisp editorial lines */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/90 pointer-events-none" />
 

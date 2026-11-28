@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import LoadingScreen from "@/components/LoadingScreen";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -9,6 +10,12 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const metadata: Metadata = {
+  title: "Master Car Rental | Luxury Chauffeur & Wedding Fleet Sri Lanka",
+  description:
+    "Luxury chauffeur-driven car rentals and wedding fleet services across Sri Lanka.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -16,7 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.className} font-sans antialiased`}>
+      <body className={`${poppins.className} font-sans bg-white text-[#0A0A0A] antialiased`}>
+        <LoadingScreen />
         {children}
       </body>
     </html>

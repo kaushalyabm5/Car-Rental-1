@@ -105,7 +105,7 @@ export default function FleetSection() {
                 </div>
 
                 <a
-                  href="#concierge"
+                  href="#"
                   className="block w-full text-center py-2.5 px-4 rounded-full border border-neutral-300 text-xs font-medium text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white hover:border-[#0A0A0A] transition-colors"
                 >
                   Rent Now

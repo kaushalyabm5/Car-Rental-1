@@ -3,13 +3,12 @@
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#hero" },
-  { label: "Fleet", href: "#fleet" },
-  { label: "About", href: "#about" },
-  { label: "How to Rent", href: "#how-to-rent" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Why Choose Us", href: "#why-choose-us" },
-  { label: "Brands", href: "#brands" },
+  { label: "Home", href: "#" },
+  { label: "Fleet", href: "/fleet" },
+  { label: "packages", href: "/packages" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "About", href: "/about" },
+  
 ];
 
 const SOCIAL_LINKS = [

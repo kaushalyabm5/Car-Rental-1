@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import img1 from "@/assets/gallery/1.jpg";
 import img2 from "@/assets/gallery/2.jpg";
 import img3 from "@/assets/gallery/3.jpg";
@@ -58,8 +58,6 @@ function CollageCard({
 }
 
 export default function GallerySection() {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <section
       id="gallery"
@@ -101,15 +99,14 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Centered Pill Button at the End */}
+        {/* Centered Pill Link at the End */}
         <div className="mt-10 text-center">
-          <button
-            type="button"
-            onClick={() => setExpanded((prev) => !prev)}
-            className="inline-flex items-center justify-center rounded-full bg-[#1C1C1C] hover:bg-black text-white text-xs md:text-sm font-medium px-6 py-2.5 transition-colors duration-300 cursor-pointer"
+          <Link
+            href="/gallery"
+            className="inline-flex items-center justify-center rounded-full bg-[#1C1C1C] hover:bg-black text-white text-xs md:text-sm font-medium px-6 py-2.5 transition-colors duration-300"
           >
-            {expanded ? "Viewing Full Gallery" : "View Full Gallery"}
-          </button>
+            View Gallery
+          </Link>
         </div>
       </div>
     </section>

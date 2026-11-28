@@ -9,6 +9,7 @@ import CarBrandsSection from "@/components/CarBrandsSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import CtaSection from "@/components/CtaSection";
+import ConciergeSection from "@/components/ConciergeSection";
 
 
 
@@ -17,13 +18,16 @@ export default function Home() {
     <main className="min-h-screen bg-[#050505] text-white">
       <Navbar />
       <HeroSection />
+      
       <FleetSection />
+    
       <AboutSection />
       <CarBrandsSection />
       <Gallery />
         <WhyChooseUsSection />
       <ReviewsSection />
       <HowToRentSection />
+        <ConciergeSection />
       
       <CtaSection />
       <Footer />
